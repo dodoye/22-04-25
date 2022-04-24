@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		@font-face {
+    font-family: 'SBAggroM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+    @font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+		*{box-sizing:  border-box;font-family: 'GmarketSansMedium';}
+		html{FONT-SIZE: 16PX; scroll-behavior: smooth; }
+		html,body{cursor: url("fork_2.png"), auto;}
+		body{perspective: 100px;}
+		body, h1,h2,h3,p,ul,li{margin: 0; padding: 0;}
+		h1,h2,h3,p{font-family: 'GmarketSansMedium'}
+		p{font-size: 1rem;text-align: center;line-height: 1.5; }
+		H1{font-size: 1.5REM;text-align: center;}
+		H2{text-align: center;line-height: 1.6;}
+		h3{font-size: 2REM;text-align: center;line-height: 1.6;}
+		h4{font-family: 'GmarketSansBold';
+		font-size: 3REM;text-align: center; line-height: 1.5; color:#F15A24; margin: auto; }
+		mark{font-family:'GmarketSansMedium' color: F5FF3F}
+
+
+		.gl{font-family:'GmarketSansLight' ; font-size: 0.8rem;}
+		.t-1{font-size: 1rem;}
+		.t-15{font-size: 1.5rem;}
+		.t-2{font-size: 2rem}
+		.t-3{font-size: 3rem;font-family:'GmarketSansLight'}
+		.t-w{color: white;}
+		.t-b{color: black;}
+		.t-bw{color: #722912}
+		.pt-10{padding-top: 10px;}
+		.pt-30{padding-top: 30px;}
+		.pt-100{padding-top: 100px;}
+		.pt-180{padding-top: 180px;}
+		.pt-250{padding-top: 250px;}
+		.pt-300{padding-top: 300px;}
+		.pt-350{padding-top: 350px;}
+		.pt-400{padding-top: 400px;}
+		.p-50{padding: 50px;}
+		.p-100{padding: 100px;}
+		.p-200{padding: 200px;}
+		.p-m{margin-top: 60px;}
+		.p-pb{padding-bottom: 100px;}
+		.w-1000{width: 1000px;}
+		.ta{text-align: left;}
+		
+
+
+		header{text-align: center; background: #F15A24; padding: 0px; }
+		nav.row{background: black; padding: 0px 50px; }
+		nav {background: black;width: 100%; height: 60px; position: fixed; z-index: 50;}
+		nav ul{width: 100%; height: 60px; float: right;}
+		nav ul li{width: 20%; float: left; text-align: center; color: white; list-style-type: none; line-height: 60px;
+				font-family: 'GmarketSansLight'; font-size: 0.9rem;}
+		nav ul li a {display: block;text-decoration: none; color: white; }
+		nav ul li a:hover{background: #F15A24;;color: white;transition: 0.2s;}
+
+		header h1{margin-top: 100px; margin-bottom: 20px;}
+		header h2{font-family: 'GmarketSansLight';font-size: 1REM;text-align: center;color: white;line-height: 1.6;}
+		section h2 {font-size: 3REM;}
+		footer{background: #F15A24;}
+		div
+		.click1{width: 300px;position: absolute; left: 120px; top: 850px;z-index: 10;}
+		.click2{width: 300px;position: absolute; left: 1300px; top: 400px;z-index: 10;}
+
+
+		section{margin: auto;}
+		.raw{width: 1000px; background: none; padding: 50px;}
+		.row{width: 1000px; background: none; margin: auto; display: flex;}
+		.logo{width: 200px; height: 60px; padding: 20px; float: left; color: #F15A24; font-family: 'GmarketSansBold'}
+		.menu{width: 700px; right: 0;}
+		.bg-none{background: none;}
+		.bg-orange{background: #F15A24;padding-top: 150px;}
+		.bg-black{background: black;}
+		.bg-img1{width: 1600px; height:1000px;margin: auto; padding top: 800px; background-image: url('blackdish.svg'); background-repeat: no-repeat;}
+		.bg-img2{width: 100%; height: 600px;margin: auto;background-image: url('line.svg'); background-repeat: no-repeat;}
+		.bg-img3{width: 100%; background-image: url('whsmdish.svg'); background-repeat: no-repeat;}
+		/*.bg-img4{width: 100%; background-image: url('koreanf.svg'); background-repeat: no-repeat;}*/
+		/*.bg-img5{width: 100%; background-image: url('westernf.svg'); background-repeat: no-repeat;}*/
+		.bg-img6{width: 100%; background-image: url('bg-6ssm.svg'); background-attachment: fixed; background size: cover; margin: auto; background-repeat: no-repeat;}
+		.bg-img7{width: 500px; background-image: url('whcdish.svg'); background-repeat: no-repeat;}
+		.bg-img8{width: 70%; height: 150px; background-image: url('pricetag.svg'); background-repeat: no-repeat;  margin: auto;}
+		
+		.bg-ss{width: 80%; background-image: url('ss_4ssm.svg'); background-size: auto; background-repeat: no-repeat;margin: auto;}
+		.fl{display: flex;flex-wrap: wrap;}
+		.po{position: relative;}
+
+        .rorow{width: 1000px; background: none; margin: auto; text-align: center; display: flex;  flex-wrap: wrap;}
+		.c-1{width: 10%; height: 200px;margin: 0px ;}
+		.c-2{width: 40%; height: 200px ;}
+		.c-3{width: 50%; height: 200px; }
+		.c-4{width: 40%; height: 200px ;}
+		.c-5{width: 0px; margin: 0px ;}
+		.c-6{width: 0px; margin: 0px ;}
+		
+		.h-200{height: 200px;}
+		.h-500{height: 500px;}
+		.h-600{height: 600px;}
+		.h-800{height: 800px;}
+		.h-1000{height: 1000px;}
+		.h-1200{height: 1200px;}
+		.h-1500{height: 1500px;}
+
+		.w-1000{width: 1000px; margin: auto;}
+
+
+		.title{padding: 150px 380px 30px 420px}
+		.plus{padding: 80px  380px 30px 380px;}
+		.mainimg{width: 30%; padding: 20px; display: flex;}
+		.dish{height: 300px;}
+
+
+		.tv{position: absolute;top: 2250px; left:1800px ; width:300px; z-index: 10;
+			animation: rightleft 5s cubic-bezier(.12,.61,.46,.9)  infinite alternate ;}
+			@keyframes rightleft
+			{from{right:00px;} to {left:1000px;}}
+
+		.smartp{position: absolute; top: 2500px; left:-300px ; width:150px; z-index: 10;
+			animation: leftright 5s cubic-bezier(.12,.61,.46,.9) infinite alternate;}
+			@keyframes leftright
+			{from{right:000px;} to {left:300px;}}
+
+		.whc{position: absolute; top: 4050px; left:-300px ; width:600px; z-index: 10;
+			animation: bigger 2s infinite alternate;}
+			@keyframes bigger
+			{0%{opacity: 0%;} 
+				50%{opacity: 20%;}
+				100% {opacity: 100%;}}
+		.whc2{position: absolute; top: 4050px; left:1400px ; width:600px; z-index: 10;
+			animation: bigger 2s infinite alternate;}
+
+		.whc3{position: absolute; top: 8750px; left:-500px ; width:500px; z-index: 10;
+			animation: rollipop1 5s  infinite ;}
+		@keyframes rollipop1
+			{0%{right:-500px; opacity: 100%;} 
+				90%{opacity: 10%;}
+				95%{opacity: 0%;}
+				100% {left:330px; opacity: 0%;}}
+		.whc4{position: absolute; top: 8750px; left:1700px ; width:500px; z-index: 10;
+			animation: rollipop2 5s  infinite ;}
+		@keyframes rollipop2
+			{0%{right:00px; opacity: 100%;} 
+				90%{opacity: 10%;}
+				95%{opacity: 0%;}
+				100% {left:830px; opacity: 0%;}}
+			
+		.mac{position: absolute; top: 500px; left:300px ; width: 1200px; height: 300px; background-color: #F15A24;
+			animation: mac 3s forwards;}
+		@keyframes mac
+			{0%{top: 500px; height: 300px;} 
+				30% {top: 500px;height: 300px;}
+				100% {top: 500px;height: 00px;}}
+
+		.fosp{position: absolute; top: 10000px; left:260px ; width: 130px;
+			animation: bye 3s infinite; }
+		@keyframes bye
+			{0%{}
+				20%{transform: rotate(20deg)}
+				50%{transform: rotate(-30deg);}
+			100%{transform: rotate(0deg)}}
+
+		.spch{position: absolute; top: 10000px; left:1300px ; width: 130px;
+			animation: bye2 3s infinite; }
+		@keyframes bye2
+			{0%{}
+				20%{transform: rotate(-20deg)}
+				50%{transform: rotate(30deg);}
+			100%{transform: rotate(0deg)}}
+
+		.bibimbab{position: absolute; top: 7600px; left:850px ; width: 550px;
+			animation: bi 10s infinite; }
+		@keyframes bi
+			{0%{}
+			
+			100%{transform: rotateY(360deg)}}
+
+
+
+		
+
+		
+
+
+	</style>
+</head>
+<body>
+
+<nav>
+	<div class="row">
+	<div class="logo">
+		Epi-tizer
+	</div>
+	<ul class="menu">
+		<li><a href="#1">소개</a></li>
+		<li><a href="#2">에피 한상</a></li>
+		<li><a href="#3">계절 특선</a></li>
+		<li><a href="#4">구독안내</a></li>
+		<li><a href="#5">목표</a></li>
+	</ul>
+</div>
+</nav>
+
+<header>
+	<section class="title"id="1">
+		<div class="mac"></div>
+		<div class="pt-30"><img src="title.svg"></div>
+
+	</section>
+	<h2>건강과 재미를 한번에 잡는, 에피-타이저!
+		<br>오로지 음식에만 집중하는 식사시간을 만들어 드립니다.
+
+		<section class=" plus">
+			<img src="mola_1.svg">
+
+			</section>
+</header>
+
+
+
+<section class="bg-orange ">
+	<div class="bg-img1">
+		<h3 class="t-w pt-400">본식 전에 Appetizer, 식사 전에 Epi-tizer!</h3>
+	</div>
+</section>
+
+
+<section class="bg-orange h-1200">
+	<div class="rorow h-200">	
+		
+
+		<h2 class="t-b p-pb w-1000" >혹시 TV, 스마트폰 보면서 식사하시나요?</h2>	
+
+		<div class="c-1"> </div>
+		<div class="c-3 bg-img3"> 
+				<p class="t-b p-m ">미국 오하이오주립대 연구 결과,<br>식사할 때 TV를 보면 <mark>비만이 될 위험 40% 증가</mark><br>:TV 보면서 식사하면 음식 섭취량 10% 늘어</p>
+		</div>
+		<div class="c-2">
+		<img src="tv.svg" class="tv" >
+		 </div>
+		
+
+		<div class="c-2"> 
+		<img src="smartphone.svg" class="smartp" ></div>
+		<div class="c-3 bg-img3  "> 
+				<p class="t-b p-m">미국 사우스캐롤라이나대학교 연구 결과,<br><mark>식사 중 스마트폰 사용시 식사 집중도 떨어져.</mark><br>식사 집중도 저하 시 속쓰림, 복통, 소화불량 유발해
+		</div>
+		<div class="c-1"> </div>
+		<div class="c-1"> </div>
+		<div class="c-3 bg-img3 "> 
+				<p class="t-b p-m">식사 집중도 높이기 위해 식사시간은 휴식시간임을<br>인지하고 <mark>오롯이 식사에만 집중하는 것이 좋아</mark><br>-인천성모병원 소화기내과 김준성 교수-
+		<div class="c-2"> </div>		
+
+
+	</div>
+</section>
+
+
+
+
+
+<section class="h-800 bg-img6">
+	<div>
+		<h2 class="pt-300 t-w">
+		산 정상 컵라면, 목욕후 단지우유 맛의 비밀</h2>
+		<p class="t-w p-m">추운 겨울, 산 정상에서 호호 불어먹는 컵라면과
+<br>목욕탕 나오면서 마시는 바나나우유는 정말 꿀맛이죠.
+<br>
+<br>같은 음식인데 어떻게 다른 맛이 날까요?
+<br> <mark>모든 음식마다 더 맛있게 즐길 수 있는 방법이 있다면요?</mark>
+<br>[D-E 입맛연구소] 직원들이 머리를 맞대고 만들어낸
+훌륭한 식사지식의 집합체를 만나보세요.
+
+	</div>
+</section>
+<section class="bg-none h-800">
+	<div class="pt-250">
+		<img src="whcdish.svg" class="whc" >
+		<img src="whcdish.svg" class="whc2" >
+		<H4>이제 Epi-tizer와 함께
+<br>소중한 식사시간에 집중하세요.</H4>
+<P class="p-m">Epi-tizer은 다양한 음식을 재밌고 맛있게 먹을 수 있도록 양식, 한식을 넘나드는
+<br><mark>1392가지의 구체적인 에피소드</mark>와 <mark>세부적인 팁, 주의사항</mark>을 제공합니다.
+<br>같은 음식도 남다르게, 더 재미있고 건강한 식사시간을 만들어보세요.</P>
+	</div>
+</section>
+<section class="po" id="2">
+	<div class="p-200 bg-orange h-1200">
+	<h2 class="t-2 p-50">Korean Dish-한식</h2>
+	<a href=" https://dodoye.github.io/22-04-25-mini/" target="_new">
+<img src="koreansm.svg">
+</a>
+<div class="click1"><img src="clickit1.svg" ></div>
+	</div>
+</section>
+<section class="po">
+	<div class="p-200 bg-orange h-1200" >
+	<h2 class="t-2 t-w  p-50">Western Dish-양식</h2>
+<img src="westernsm.svg">
+<div class="click2"><img src="clickit2.svg"></div>
+</section>
+<section>
+	<div class="bg-orange h-1200" id="3">
+		<div class="bg-ss h-1000">
+			<div class="rorow h-1000">
+				<div class="c-3 h-1000"> <h2 class="t-3 pt-300 ta">봄나물 산채비빔밥</h2>
+	 	<h2 class="t-15 ta">SPRING GREENS BIBIMBAB</h2> </div>
+
+	 	<div class="c-3 h-1000"> <div class="pt-350"><img src="bibimbabssm.svg" class= "bibimbab"></div></div>
+	
+	</div>
+</section>
+<section>
+	<img src="whcdish.svg" class="whc3" >
+	<img src="whcdish.svg" class="whc4" >	
+	<div class="bg-orange h-1500 p-pb" id="4">
+		<h2 class="p-m p-pb">멤버십 구독안내</h2>
+		<div class="w-1000 h-1000 fl">
+		<div class="bg-img7 ">
+		<h1 class="pt-180">12개월 플랜</h1>
+		<br>
+		<p>-하루 111원꼴
+<br>-1392가지 에피소드 자유이용
+<br>-새로운 레시피 지속적 업데이트 중
+</div>
+
+<div class=" bg-img7">
+<h1 class="pt-180">무료 멤버십</h1>
+<br>
+<p>
+<br>-하루 한가지 에피소드 조회가능
+<br>(*매일 자정 12시 초기화)
+</p>
+</div>
+
+<div class="c-3 "> 
+	<div class="bg-img8 "> 
+		<h3 class="pt-30 ">39,990</h1>
+</div>
+	</div>
+<div class="c-3 "> 
+	<div class="bg-img8 "> 
+		<h3 class="pt-30">FREE</h1>
+</div>
+
+	</div>
+	</section>
+
+	
+
+<section class= "bg-black" id="5">
+	<div class="h-600">
+		<img src="fosp.svg" class="fosp" >
+		<img src="spch.svg" class="spch" >
+		<p class="pt-250 t-w t-15">독자들의 행복한 식사를 위해 Epi-tizer 연구원들은 언제나 최선을 다합니다.
+			<br>오늘도 건강하고, 즐겁고, 맛있는 식사 하세요!
+			<br><mark>♥</mark>
+			</p>
+	</div>
+	
+</section class="bg-orange">
+<footer>
+	<div class="p-200">
+	<h4 class="t-b pt-100">Epi-tizer</h4>
+	<p class="gl t-b t-1 p-50">2022&copy;이수정
+	<BR>SEOULTECH WEB-INTERFACEDESIGN SECOND PROJECT_EPI-TIZER</BR>
+/web designer: 이수정/please contact via lsj123804@gmail.com/</BR>[D-E]입맛연구소 전화번호: 02-345-6789
+[D-E 입맛연구소] 위치: 식사시 맛있군 말하면 좋으리</p>
+<p class="gl t-bw">*본 페이지는 입맛연구소 홍보의 일환으로 만들어진 프로모션 페이지입니다. 본 페이지에서 소개된 상품은 사이트 방문자에 한해 추첨을 통해 매주 일정 인원에게 랜덤 전송됩니다. 갑자기 우편물이 날아와도 놀라지 마세요. 효과는 개인마다 다를 수 있으며 입맛이 너무 돌아 체중이 증가해도 책임지지 않음을 명시합니다. 자동 상품 추첨에 동의하지 않으시면 본 사이트 방문 후 방문 기록을 24시간 이내로 삭제해 주세요. 48시간 이상 사이트 방문 기록이 남아 있을 시 추첨 데이터에 자동으로 포함됩니다.
+	</p>
+</div>
+
+</footer>
+</body>
+</html>
